@@ -1,0 +1,320 @@
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    background-color: #DFDBE5;
+    background-image: url("data:image/svg+xml,%3Csvg width='84' height='16' viewBox='0 0 84 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M78 7V4h-2v3h-3v2h3v3h2V9h3V7h-3zM30 7V4h-2v3h-3v2h3v3h2V9h3V7h-3zM10 0h2v16h-2V0zm6 0h4v16h-4V0zM2 0h4v16H2V0zm50 0h2v16h-2V0zM38 0h2v16h-2V0zm28 0h2v16h-2V0zm-8 0h6v16h-6V0zM42 0h6v16h-6V0z' fill='%235c17ca' fill-opacity='0.36' fill-rule='evenodd'/%3E%3C/svg%3E");
+    font-size: 16px; /*Tamaño de la letra*/
+    font-family: 'oswald',optima; /*Tipo de letra*/
+}
+
+a
+{
+    color: black; /*color etiquetas de la nav*/
+    text-decoration: none; /*quita el subrayado de las etiquetas nav*/
+}
+
+ul
+{
+    list-style: none;/*quita los punto de las etiquetas nav*/
+}
+
+.container
+{
+    width: 90%;
+    margin: auto;
+}
+
+/*NAVIGATION*/
+.navMain
+{
+    font-size: 18px;
+    display: flex; /*Se usa para que los elementos de la navegacion esten uno al lado del otro*/
+    justify-content: space-between; /*Se usa para que los elementos de la navegacion utilicen todo el ancho disponible*/
+    align-items: center;
+    height: 60px;
+    padding: 20px 0;
+}
+
+.navBrand
+{
+   width: 50px; 
+}
+
+/*NAV LEFT*/
+.navMain ul
+{
+    display: flex;
+}
+
+.navMain ul li
+{
+    padding: 10px;/*ayuda a separar las etiquetas nav*/
+}
+
+.navMain ul li a:hover
+{
+  border-bottom: 2px solid black; /*Cuando se le pasa el raton a la navMenu muestra una linea*/
+  padding: 2px; /*espaciado de la linea*/
+}
+
+.navMain ul.navMenu
+{
+    flex: 1; /*pone las etiquetas nav al lado del logotipo*/
+    margin: 20px; /*separa un poco las etiquetas nav de la imagen*/
+}
+
+.navMain ul.navMenuRight
+{
+    margin-right: 30px;
+}
+
+/*SHOWCASE*/
+.menuBTN
+{
+    position: absolute;
+    cursor: pointer;
+    top: 15px;
+    right: 30px;
+    z-index: 2;
+    display: none;
+}
+
+hr
+{
+    margin: 20px 0;
+}
+
+.showCase a
+{
+    color: white;
+}
+
+.showCase
+{
+    color: white;
+    width: 100%;
+    height: 550px;
+    background: url('./IMAGENES/banner.jpg')no-repeat center center/cover;/*centra la imagen y coloca la imagen completa*/
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*Coloca el texto central*/
+    justify-content: flex-end; /*coloca el texto central y abajo*/
+    margin-bottom: 20px;
+}
+
+.btn
+{
+    cursor: pointer; /*cuando se pasa el raton encima del boton leer mas cambia el cursor normal a una mano*/
+    display: inline-block;
+    border: 0;
+    font-weight: bold;
+    padding: 10px 20px;
+    background: #262626; /*color de fondo del boton*/
+    color: white; /*color de las letras del boton*/
+    font-size: 15px;
+    border: 1px solid white;
+}
+
+.btn:hover
+{
+    opacity: .5;
+}
+
+.showCase h2, .showCase p /*separa el texto que esta dentro del banner con el boton*/
+{
+    margin-bottom: 10px;
+}
+
+/*NEWSCARDS*/
+.newsCards
+{
+    display: grid;
+    grid-template-columns: repeat(5,1fr) /*1fr 1fr 1fr 1fr 1fr - nos sirve para separar las 5 newscard y colocarlas una al lado del otra, hay 2 formas de hacerlo*/;
+    gap: 25px; /*separa los newscards*/
+}
+
+.newsCards img
+{
+    width: 100%;
+    height: 300px;
+}
+
+.newsCards h2
+{
+    font-size: 18px;
+    text-align: center;
+}
+
+.newsCards a
+{
+    padding: 10px 0;
+    text-transform: uppercase;
+    display: inline-block; /*separa*/
+    font-weight: bold; /*negrita*/
+}
+
+.newsCards a:hover
+{
+    text-decoration: underline;
+}
+
+/*CARD BANNER ONE*/
+.cardsBannerOne
+{
+    width: 100%;
+    height: 350px;
+    background: url('./IMAGENES/tarjeta(seccion-div5).jpeg')no-repeat center/cover;
+    margin-bottom: 30px;
+}
+
+.cardsBannerOne .content
+{
+    width: 40%;
+    padding: 90px 0 0 30px;
+    color: white;
+}
+
+.cardsBannerOne p, .cardsBannerOne h2
+{
+    margin: 10px 0 20px 0;
+}
+
+.cardsBannerTwo
+{
+    background: url('./IMAGENES/bannerEsperanza.jpeg') no-repeat center center/cover;
+    width: 100%;
+    height: 350px;
+    margin-bottom: 20px;
+}
+
+.cardsBannerTwo .contentTwo
+{
+    width: 40%;
+    padding: 90px 0 0 30px;
+}
+
+/*SOCIAL MEDIA*/
+.socialMedia
+{
+    margin: 50px;
+}
+
+.socialMedia p
+{
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.links
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px
+}
+
+.links a i
+{
+    font-size: 3rem; /*aumenta el tamaño de los iconos*/
+}
+
+/*FOOTER*/
+.footerLinks
+{
+    background: #2f3640;
+    color: white;
+    font-size: 12px;
+    padding: 35px 0;
+}
+
+.footerContainer
+{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /*gap: 10px;
+    align-items: flex-start;
+    justify-content: center;*/
+}
+
+.footerContainer ul
+{
+   margin: 0 auto; /*Ordena las columnas del footer*/
+}
+
+.footerContainer ul li
+{
+    line-height: 2.8;/*separa todos los ul del footer verticalmente*/
+}
+
+.footer
+{
+    background: #2f3640;
+    color: #616161;
+    font-size: 12px;
+    padding: 20px 0;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+@media(max-width:700px)
+{
+    .menuBTN
+    {
+        display: block;
+    }
+
+    .navMain ul.navMenu
+    {
+        display: block; /*agrupa la navegacion en bloques*/
+        position: absolute;/*coloca la navegacion encima de todo*/
+        top: 0; /*coloca la navegacion lo mas arriba posinble*/
+        left: 0; /*coloca la navegacion los mas a la izquierda posible*/
+        background: #2f3640;
+        height: 100%; /*estira la barra*/
+        padding: 30px;
+        opacity: .9; /*pone transparente la barra de la nueva navegacion*/
+        transform: translatex(-400px);  /*mueve la barra lateral*/
+        transition: transform .5s ease-in-out;/*transicion para la barra lateral*/
+        margin: 0;
+    }
+
+    .navMain ul.navMenu.show
+    {
+        transform: translate(-20px);
+    }
+
+    .navMain ul.navMenu li
+    {
+        color: white;
+        padding: 20px;
+        font-size: 14px;
+    }
+
+    .navMain ul.navMenu li a
+    {
+        color: white;
+    }
+
+    .navMain ul.navMenu li a:hover
+    {
+        border-bottom: white solid 1px;
+    }
+
+    .newsCards
+    {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .cardsBannerOne .content, .cardsBannerTwo .contentTwo
+    {
+        width: 90%;
+    }
+}
